@@ -22,7 +22,12 @@ public class CostEstimator {
 	/**
      * variable add
      **/
-	private double add;
+	private double addOns;
+	final int oneNumb = 1;
+	final int twoNumb = 2;
+	final int threeNumb = 3;
+	final int tenNumb = 10;
+	final int sevenNumb = 7;
 
 	/**
 	 * ...
@@ -30,28 +35,28 @@ public class CostEstimator {
 	 * @param traveler
 	 * @param vacDay
 	 */
-	public CostEstimator(String dest, int traveler, int vacDay, int addon) {
+	public CostEstimator(String destin, int traveler, int vacDay, int addon) {
 		super();
-		this.destination = dest;
+		this.destination = destin;
 		this.travelers = traveler;
 		this.vacDays = vacDay;
 		this.packCost = 1000;
-		this.add = addon;
+		this.addOns = addon;
 	}
 
 	/**
      * popular spot.
      **/
 	public double popularSpot() {
-		double temp;
+		double tempor;
 		if (destination.equals("Paris")) {
-			temp = packCost+500;
+			tempor = packCost+500;
 		} else if (destination.equals("New York City")) {
-			temp = packCost+600;
+			tempor = packCost+600;
 		} else {
-			temp = packCost;
+			tempor = packCost;
 		}
-		return temp;
+		return tempor;
 	}
 
 	/**
@@ -60,10 +65,10 @@ public class CostEstimator {
 	public double travelersDiscount() {
 		double discount;
 		double total;
-		if (travelers>4 && travelers<10) {
+		if (travelers > 4 && travelers < tenNumb) {
 			discount=packCost*0.10;
 			total =  packCost-discount;
-		} else if(travelers>10){
+		} else if (travelers > tenNumb) {
 			discount=packCost*0.20;
 			total = packCost - discount;
 		} else {
@@ -77,7 +82,7 @@ public class CostEstimator {
      **/
 	public double penaltyFee() {
 		double total;
-		if (vacDays<7) {
+		if (vacDays<sevenNumb) {
 			total = packCost+200;
 		} else if (vacDays>30 || vacDays==2) {
 			total = packCost-200;
@@ -89,11 +94,11 @@ public class CostEstimator {
 
 	public double addons() {
 		double addons;
-		if(add==1) {
+		if(addOns==oneNumb) {
 			addons = packCost+(200*travelers);
-		}else if(add==2) {
+		}else if(addOns==twoNumb) {
 			addons = packCost+(150*travelers);
-		}else if(add==3) {
+		}else if(addOns==threeNumb) {
 			addons = packCost+(100*travelers);
 		}else {
 			addons = packCost;

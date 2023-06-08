@@ -1,0 +1,12 @@
+src/main/java/vacation/CostEstimator.java:25:	ShortVariable:	ShortVariable: Avoid variables with short names like add
+src/main/java/vacation/CostEstimator.java:33:	ShortVariable:	ShortVariable: Avoid variables with short names like dest
+src/main/java/vacation/CostEstimator.java:46:	ShortVariable:	ShortVariable: Avoid variables with short names like temp
+src/main/java/vacation/CostEstimator.java:66:	AvoidLiteralsInIfCondition:	AvoidLiteralsInIfCondition: Avoid using literals in if statements
+src/main/java/vacation/CostEstimator.java:80:	AvoidLiteralsInIfCondition:	AvoidLiteralsInIfCondition: Avoid using literals in if statements
+src/main/java/vacation/CostEstimator.java:92:	AvoidLiteralsInIfCondition:	AvoidLiteralsInIfCondition: Avoid using literals in if statements
+src/main/java/vacation/CostEstimator.java:94:	AvoidLiteralsInIfCondition:	AvoidLiteralsInIfCondition: Avoid using literals in if statements
+src/main/java/vacation/CostEstimator.java:96:	AvoidLiteralsInIfCondition:	AvoidLiteralsInIfCondition: Avoid using literals in if statements
+src/main/java/vacation/Main.java:7:	ShortClassName:	ShortClassName: Avoid short class names like Main
+src/main/java/vacation/Main.java:13:	ShortMethodName:	ShortMethodName: Avoid using short method names
+src/main/java/vacation/Main.java:13:	ShortVariable:	ShortVariable: Avoid variables with short names like args
+src/main/java/vacation/Main.java:31:	ShortVariable:	ShortVariable: Avoid variables with short names like days

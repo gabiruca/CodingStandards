@@ -3,14 +3,13 @@
 package vacation;
 import java.util.Scanner;
 
-
-public class Main {
+public class Main { //NOPMD
 
 	//CHECKSTYLE: OFF
 	/**
      * @param args
      **/
-	public static void main(String[] args) {
+	public static void main(String[] args) { //NOPMD
 	//CHECKSTYLE: ON
 		final int noAllowed = 80;
 		Scanner scanner = new Scanner(System.in);
@@ -28,10 +27,10 @@ public class Main {
 			travelers = scanner.nextLine();
 		}
 		System.out.println("Number of days: ");
-		String days = scanner.nextLine();
-		while (days.isEmpty()) {
+		String travDays = scanner.nextLine();
+		while (travDays.isEmpty()) {
 			System.out.println("Number of days: ");
-			days = scanner.nextLine();
+			travDays = scanner.nextLine();
 		}
 		System.out.println("Would you like select an add-on? ");
 		System.out.println("1. All-Inclusive Package");
@@ -52,7 +51,7 @@ public class Main {
 			System.out.println("The vacation package is not available for more than 80 people");
 		} else {
 			CostEstimator estimator;
-			estimator = new CostEstimator(destination, Integer.valueOf(travelers), Integer.valueOf(days), Integer.valueOf(addon));
+			estimator = new CostEstimator(destination, Integer.valueOf(travelers), Integer.valueOf(travDays), Integer.valueOf(addon));
 			estimator.setPackCost(estimator.popularSpot());
 			estimator.setPackCost(estimator.travelersDiscount());
 			estimator.setPackCost(estimator.penaltyFee());

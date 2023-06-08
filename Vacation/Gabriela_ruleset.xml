@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Gabriela Rules"
+		xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+		<description>
+			Code Inspection Lab, Gabriela Cecilia Sosa Casal
+		</description>
+		<rule ref="category/java/codestyle.xml/ShortVariable">
+		    <properties>
+		        <property name="minimum" value="5" />
+		    </properties>
+		</rule>
+		<rule ref="category/java/errorprone.xml/AvoidLiteralsInIfCondition" />
+		<rule ref="category/java/codestyle.xml/ShortMethodName">
+		    <properties>
+		        <property name="minimum" value="5" />
+		    </properties>
+		</rule>
+		<rule ref="category/java/codestyle.xml/ShortClassName" />
+	</ruleset>
