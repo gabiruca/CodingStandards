@@ -33,16 +33,30 @@ public class Main {
 			System.out.println("Number of days: ");
 			days = scanner.nextLine();
 		}
-
+		System.out.println("Would you like select an add-on? ");
+		System.out.println("1. All-Inclusive Package");
+		System.out.println("2. Adventure Activities Package");
+		System.out.println("3. Spa and Wellness Package");
+		System.out.println("4. No add-on");
+		String addon = scanner.nextLine();
+		while (addon.isEmpty() || Integer.valueOf(addon)> 4 || Integer.valueOf(addon)<1) {
+			System.out.println("Would you like select an add-on?");
+			System.out.println("1. All-Inclusive Package");
+			System.out.println("2. Adventure Activities Package");
+			System.out.println("3. Spa and Wellness Package");
+			System.out.println("4. No add-on");
+			addon = scanner.nextLine();
+		}
 		if (Integer.valueOf(travelers) > noAllowed) {
 			System.out.println("***** The total amount you have to pay is: -1 *****");
 			System.out.println("The vacation package is not available for more than 80 people");
 		} else {
 			CostEstimator estimator;
-			estimator = new CostEstimator(destination, Integer.valueOf(travelers), Integer.valueOf(days));
+			estimator = new CostEstimator(destination, Integer.valueOf(travelers), Integer.valueOf(days), Integer.valueOf(addon));
 			estimator.setPackCost(estimator.popularSpot());
 			estimator.setPackCost(estimator.travelersDiscount());
 			estimator.setPackCost(estimator.penaltyFee());
+			estimator.setPackCost(estimator.addons());
 			System.out.println("***** The total amount you have to pay is: "+estimator.getPackCost()+" *****");
 		}
 		scanner.close();

@@ -19,6 +19,10 @@ public class CostEstimator {
      * variable packCost.
      **/
 	private double packCost;
+	/**
+     * variable add
+     **/
+	private double add;
 
 	/**
 	 * ...
@@ -26,12 +30,13 @@ public class CostEstimator {
 	 * @param traveler
 	 * @param vacDay
 	 */
-	public CostEstimator(String dest, int traveler, int vacDay) {
+	public CostEstimator(String dest, int traveler, int vacDay, int addon) {
 		super();
 		this.destination = dest;
 		this.travelers = traveler;
 		this.vacDays = vacDay;
 		this.packCost = 1000;
+		this.add = addon;
 	}
 
 	/**
@@ -82,7 +87,20 @@ public class CostEstimator {
 		return total;
 	}
 
-
+	public double addons() {
+		double addons;
+		if(add==1) {
+			addons = packCost+(200*travelers);
+		}else if(add==2) {
+			addons = packCost+(150*travelers);
+		}else if(add==3) {
+			addons = packCost+(100*travelers);
+		}else {
+			addons = packCost;
+		}
+		return addons;
+	}
+	
 	public String getDestination() {
 		return destination;
 	}
@@ -114,7 +132,5 @@ public class CostEstimator {
 	public void setPackCost(double packCost) {
 		this.packCost = packCost;
 	}
-	
-	
 	
 }
